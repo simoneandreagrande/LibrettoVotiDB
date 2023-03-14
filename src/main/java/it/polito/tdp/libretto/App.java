@@ -22,6 +22,8 @@ public class App extends Application {
 
     	stage.setScene(scene);
         stage.show();
+        
+        // commento per git
     }
 
     public static void main(String[] args) {
