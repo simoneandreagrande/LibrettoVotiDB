@@ -47,6 +47,14 @@ public class Libretto {
 		return this.voti.add(v); // ritorna un valore boolean che è sempre vero
 	}
 
+	public String toString() {
+		String txt = "";
+		for (Voto v : this.voti) {
+			txt = txt + v.toString() + "\n";
+		}
+		return txt;
+	}
+	
 	public void stampa() {
 		for (Voto v : this.voti) {
 			System.out.println(v);
@@ -198,6 +206,7 @@ public class Libretto {
 		return ordinato;
 
 	}
+	
 	
 	
 	

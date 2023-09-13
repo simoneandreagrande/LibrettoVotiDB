@@ -22,6 +22,7 @@ public class App extends Application {
     	Parent root = loader.load();
     	Scene scene = new Scene(root) ;
     	
+    	// chiudono il main sul modello MVC
     	Libretto model = new Libretto();
     	Controller controller = loader.getController();
     	controller.setModel(model);
