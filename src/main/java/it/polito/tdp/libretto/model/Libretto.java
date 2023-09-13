@@ -7,13 +7,17 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import it.polito.tdp.libretto.db.VotoDAO;
+
 public class Libretto {
 
 	private List<Voto> voti; // ovunque possibile usare interfaccia, la classe non sa che tipo di lista
 								// concreta stiamo usando
 
 	public Libretto() {
-		this.voti = new ArrayList<Voto>();
+		// chiedo al database i voti
+		VotoDAO dao = new VotoDAO();
+		this.voti = dao.listVoti(); // costruisco il modello prendendo i dati dal database 
 	}
 
 	/**
@@ -44,6 +48,9 @@ public class Libretto {
 			// oppure ritorno un valore nulla
 		
 		}
+		
+		VotoDAO dao = new VotoDAO();
+		dao.createVoto(v);
 		return this.voti.add(v); // ritorna un valore boolean che è sempre vero
 	}
 

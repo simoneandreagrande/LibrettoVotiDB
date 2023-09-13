@@ -21,6 +21,7 @@ public class Controller { // controller non deve mai fare la new del modello, la
 
 	public void setModel(Libretto model) {
 		this.model = model;
+		txtResult.setText(this.model.toString());
 	}
 	
 	
