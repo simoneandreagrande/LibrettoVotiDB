@@ -91,11 +91,13 @@ public class VotoDAO {
 	
 	
 	
-	public Voto readVoto(String corso) { // il corso è la chiave primaria
+	public Voto readVoto(String corso) {
+		return null; // il corso è la chiave primaria
 		
 	}
 	
 	public List<Voto> searchVotoPuntiMaggiori (int punti) {
+		return null;
 		
 		
 	}
